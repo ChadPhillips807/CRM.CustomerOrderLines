@@ -1,0 +1,12 @@
+D:\Learning\ASP.Net\CRM\Customer.DetailsDisplay\bin\Debug\Customer.DetailsDisplay.exe.config
+D:\Learning\ASP.Net\CRM\Customer.DetailsDisplay\bin\Debug\Customer.DetailsDisplay.exe
+D:\Learning\ASP.Net\CRM\Customer.DetailsDisplay\bin\Debug\Customer.DetailsDisplay.pdb
+D:\Learning\ASP.Net\CRM\Customer.DetailsDisplay\obj\Debug\Customer.DetailsDisplay.csprojResolveAssemblyReference.cache
+D:\Learning\ASP.Net\CRM\Customer.DetailsDisplay\obj\Debug\Customer.DetailsDisplay.customerDetailsDisplayForm.resources
+D:\Learning\ASP.Net\CRM\Customer.DetailsDisplay\obj\Debug\Customer.DetailsDisplay.Properties.Resources.resources
+D:\Learning\ASP.Net\CRM\Customer.DetailsDisplay\obj\Debug\Customer.DetailsDisplay.csproj.GenerateResource.Cache
+D:\Learning\ASP.Net\CRM\Customer.DetailsDisplay\obj\Debug\Customer.DetailsDisplay.exe
+D:\Learning\ASP.Net\CRM\Customer.DetailsDisplay\obj\Debug\Customer.DetailsDisplay.pdb
+E:\_CSharp_Projects\GitHub\CRM\Customer.DetailsDisplay\bin\Debug\Customer.DetailsDisplay.exe.config
+E:\_CSharp_Projects\GitHub\CRM\Customer.DetailsDisplay\obj\Debug\Customer.DetailsDisplay.exe
+E:\_CSharp_Projects\GitHub\CRM\Customer.DetailsDisplay\obj\Debug\Customer.DetailsDisplay.pdb
