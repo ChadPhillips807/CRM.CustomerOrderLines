@@ -10,3 +10,11 @@ D:\Learning\ASP.Net\CRM\Customer.DetailsDisplay\obj\Debug\Customer.DetailsDispla
 E:\_CSharp_Projects\GitHub\CRM\Customer.DetailsDisplay\bin\Debug\Customer.DetailsDisplay.exe.config
 E:\_CSharp_Projects\GitHub\CRM\Customer.DetailsDisplay\obj\Debug\Customer.DetailsDisplay.exe
 E:\_CSharp_Projects\GitHub\CRM\Customer.DetailsDisplay\obj\Debug\Customer.DetailsDisplay.pdb
+E:\_CSharp_Projects\GitHub\CRM\Customer.DetailsDisplay\bin\Debug\Customer.DetailsDisplay.exe
+E:\_CSharp_Projects\GitHub\CRM\Customer.DetailsDisplay\bin\Debug\Customer.DetailsDisplay.pdb
+E:\_CSharp_Projects\GitHub\CRM\Customer.DetailsDisplay\obj\Debug\Customer.DetailsDisplay.csprojResolveAssemblyReference.cache
+E:\_CSharp_Projects\GitHub\CRM\Customer.DetailsDisplay\obj\Debug\Customer.DetailsDisplay.customerDetailsDisplayForm.resources
+E:\_CSharp_Projects\GitHub\CRM\Customer.DetailsDisplay\obj\Debug\Customer.DetailsDisplay.Properties.Resources.resources
+E:\_CSharp_Projects\GitHub\CRM\Customer.DetailsDisplay\obj\Debug\Customer.DetailsDisplay.csproj.GenerateResource.Cache
+E:\_CSharp_Projects\GitHub\CRM\Customer.DetailsDisplay\bin\Debug\DataAccessLib.dll
+E:\_CSharp_Projects\GitHub\CRM\Customer.DetailsDisplay\bin\Debug\DataAccessLib.pdb

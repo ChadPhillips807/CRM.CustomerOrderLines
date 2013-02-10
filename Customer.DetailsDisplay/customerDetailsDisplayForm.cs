@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DataAccessLib;
 
 /* 
  * The application must provide the following functionality:
@@ -46,9 +47,23 @@ namespace Customer.DetailsDisplay
 {
     public partial class customerDetailsDisplayForm : Form
     {
+        private DataSet northwndCustOrdersDataSet;
+        
         public customerDetailsDisplayForm()
         {
             InitializeComponent();
+        }
+
+        private void customerDetailsDisplayForm_Load(object sender, EventArgs e)
+        {
+            northwndCustOrdersDataSet = CustomerDataAccess.GetCustomersAndOrders();
+
+            customerDataGridView.DataSource = northwndCustOrdersDataSet;
+            customerDataGridView.DataMember = "Customers";
+        
+        
+        
+        
         }
     }
 }
