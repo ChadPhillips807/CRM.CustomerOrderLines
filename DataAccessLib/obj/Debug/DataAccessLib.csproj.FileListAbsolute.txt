@@ -2,4 +2,3 @@ E:\_CSharp_Projects\GitHub\CRM\DataAccessLib\bin\Debug\DataAccessLib.dll
 E:\_CSharp_Projects\GitHub\CRM\DataAccessLib\bin\Debug\DataAccessLib.pdb
 E:\_CSharp_Projects\GitHub\CRM\DataAccessLib\obj\Debug\DataAccessLib.dll
 E:\_CSharp_Projects\GitHub\CRM\DataAccessLib\obj\Debug\DataAccessLib.pdb
-E:\_CSharp_Projects\GitHub\CRM\DataAccessLib\obj\Debug\DataAccessLib.csprojResolveAssemblyReference.cache

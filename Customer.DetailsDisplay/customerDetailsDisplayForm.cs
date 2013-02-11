@@ -58,12 +58,11 @@ namespace Customer.DetailsDisplay
         {
             northwndCustOrdersDataSet = CustomerDataAccess.GetCustomersAndOrders();
 
+            customerNameTextBox.DataBindings.Add("Text", northwndCustOrdersDataSet, "Customers.CompanyName");
+            
             customerDataGridView.DataSource = northwndCustOrdersDataSet;
-            customerDataGridView.DataMember = "Customers";
-        
-        
-        
-        
+
+            customerDataGridView.DataMember = "Customers.CustToOrdersRel";    
         }
     }
 }

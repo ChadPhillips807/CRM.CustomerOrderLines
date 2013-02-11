@@ -59,7 +59,6 @@ namespace DataAccessLib
 
             DataSet northwndCustOrdersDataSet;
             DataRelation CustToOrdersRelation;
-            DataRelation OrdersToOrderDetRelation;
 
             try
             {
@@ -80,23 +79,15 @@ namespace DataAccessLib
                 // Fill the dataset with Orders
                 northwindDataAdapter.Fill(northwndCustOrdersDataSet, "Orders");
 
-                // change command text to select Order Details
-                northwindDataAdapter.SelectCommand.CommandText = selectAllFromOrderDetails;
-
-                // Fill the dataset with Order Details
-                northwindDataAdapter.Fill(northwndCustOrdersDataSet, "Order Details");
-
+                // Create the Customers to Orders relationship
                 CustToOrdersRelation = new DataRelation("CustToOrdersRel",
                     northwndCustOrdersDataSet.Tables["Customers"].Columns["CustomerID"],
                     northwndCustOrdersDataSet.Tables["Orders"].Columns["CustomerID"]);
-
-                OrdersToOrderDetRelation = new DataRelation("OrdersToOrderDetailsRelation",
-                    northwndCustOrdersDataSet.Tables["Orders"].Columns["OrderID"],
-                    northwndCustOrdersDataSet.Tables["Order Details"].Columns["OrderID"]);
-
+                
+                // Add the Customers to Orders relationship to the dataset
                 northwndCustOrdersDataSet.Relations.Add(CustToOrdersRelation);
-                northwndCustOrdersDataSet.Relations.Add(OrdersToOrderDetRelation);
 
+                // returning the filled dataset to whatever calls for it!!
                 return northwndCustOrdersDataSet;
             }
             catch (SqlException ex)
