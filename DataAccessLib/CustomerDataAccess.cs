@@ -16,9 +16,6 @@ namespace DataAccessLib
         //b. All columns from the Customer table in the Northwind database should be displayed for each customer.
         private const string selectAllFromCustomers = "SELECT * FROM Customers ORDER BY CustomerID";
         private const string selectAllFromOrders = "SELECT * FROM Orders ORDER BY OrderID";
-        private const string selectAllFromOrderDetails = "SELECT * FROM [Order Details] ORDER BY OrderID";
-                
-        //private const string joinCustomerNameToOrders = "SELECT * FROM Customers C INNER JOIN Orders as O on C.CustomerID = O.CustomerID INNER JOIN [Order Details] as OD on O.OrderID = OD.OrderID INNER JOIN Products as P on OD.ProductID = P.ProductID";
         
         /*c. When the customer information for a customer is displayed,
         *    a list of that customer’s orders should also be displayed.
@@ -54,6 +51,7 @@ namespace DataAccessLib
         public static DataSet GetCustomersAndOrders()
         {
             SqlDataAdapter northwindDataAdapter = new SqlDataAdapter();
+            
             northwindDataAdapter.SelectCommand = new SqlCommand();
             northwindDataAdapter.SelectCommand.Connection = new SqlConnection();
 
@@ -72,7 +70,7 @@ namespace DataAccessLib
 
                 // Fill the dataset with Customers
                 northwindDataAdapter.Fill(northwndCustOrdersDataSet, "Customers");
-                
+
                 // change command text to select orders
                 northwindDataAdapter.SelectCommand.CommandText = selectAllFromOrders;
 
@@ -83,17 +81,21 @@ namespace DataAccessLib
                 CustToOrdersRelation = new DataRelation("CustToOrdersRel",
                     northwndCustOrdersDataSet.Tables["Customers"].Columns["CustomerID"],
                     northwndCustOrdersDataSet.Tables["Orders"].Columns["CustomerID"]);
-                
+
                 // Add the Customers to Orders relationship to the dataset
                 northwndCustOrdersDataSet.Relations.Add(CustToOrdersRelation);
 
                 // returning the filled dataset to whatever calls for it!!
                 return northwndCustOrdersDataSet;
             }
-            catch (SqlException ex)
+            catch (SqlException)
             {
                 // Use generic message to not give the actual exception to the hackers
                 throw new ApplicationException(sqlExcptMsg);
+            }
+            finally
+            {
+                northwindDataAdapter.SelectCommand.Connection.Close();
             }
         }
 

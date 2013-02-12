@@ -59,10 +59,87 @@ namespace Customer.DetailsDisplay
             northwndCustOrdersDataSet = CustomerDataAccess.GetCustomersAndOrders();
 
             customerNameTextBox.DataBindings.Add("Text", northwndCustOrdersDataSet, "Customers.CompanyName");
-            
+            contactNameTextBox.DataBindings.Add("Text", northwndCustOrdersDataSet, "Customers.ContactName");
+            contactTitleTextBox.DataBindings.Add("Text", northwndCustOrdersDataSet, "Customers.ContactTitle");
+            addressTextBox.DataBindings.Add("Text", northwndCustOrdersDataSet, "Customers.Address");
+            cityTextBox.DataBindings.Add("Text", northwndCustOrdersDataSet, "Customers.City");
+            regionTextBox.DataBindings.Add("Text", northwndCustOrdersDataSet, "Customers.Region");
+            zipTextBox.DataBindings.Add("Text", northwndCustOrdersDataSet, "Customers.PostalCode");
+            countryTextBox.DataBindings.Add("Text", northwndCustOrdersDataSet, "Customers.Country");
+
             customerDataGridView.DataSource = northwndCustOrdersDataSet;
 
             customerDataGridView.DataMember = "Customers.CustToOrdersRel";    
+        }
+       
+        /// <summary>
+        /// Moves to row 1
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void topOfListButton_Click(object sender, EventArgs e)
+        {
+            if (BindingContext[northwndCustOrdersDataSet, "Customers"].Position != 0)// If you're at the top of the list already
+            {
+                BindingContext[northwndCustOrdersDataSet, "Customers"].Position = 0;
+            }
+            else
+            {
+                MessageBox.Show("Can't go up any higher");
+            }
+        }
+
+        /// <summary>
+        /// Moves to up 1 row
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void upButton_Click(object sender, EventArgs e)
+        {
+            if (BindingContext[northwndCustOrdersDataSet, "Customers"].Position != 0)// If you're at the top of the list already
+            {
+                BindingContext[northwndCustOrdersDataSet, "Customers"].Position -= 1;
+            }
+            else
+            {
+                MessageBox.Show("Can't go up any higher");
+            }
+
+        }
+
+        /// <summary>
+        /// Moves down 1 row
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void downButton_Click(object sender, EventArgs e)
+        {
+            if (BindingContext[northwndCustOrdersDataSet, "Customers"].Position != BindingContext[northwndCustOrdersDataSet, "Customers"].Count - 1)// If you're at the Bottom of the list already
+            {
+                BindingContext[northwndCustOrdersDataSet, "Customers"].Position += 1;
+            }
+            else
+            {
+                MessageBox.Show("Can't go down any LOWER");
+            }
+            
+        }
+
+        /// <summary>
+        /// Moves to last row
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void bottomOfListButton_Click(object sender, EventArgs e)
+        {
+            if (BindingContext[northwndCustOrdersDataSet, "Customers"].Position != BindingContext[northwndCustOrdersDataSet, "Customers"].Count - 1)// If you're at the Bottom of the list already
+            {
+                BindingContext[northwndCustOrdersDataSet, "Customers"].Position = BindingContext[northwndCustOrdersDataSet, "Customers"].Count - 1;
+            }
+            else
+            {
+                MessageBox.Show("Can't go down any LOWER");
+            }
         }
     }
 }

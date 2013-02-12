@@ -77,26 +77,29 @@
             this.topOfListButton.TabIndex = 1;
             this.topOfListButton.Text = "Top of List";
             this.topOfListButton.UseVisualStyleBackColor = true;
+            this.topOfListButton.Click += new System.EventHandler(this.topOfListButton_Click);
             // 
             // upButton
             // 
             this.upButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.upButton.Location = new System.Drawing.Point(139, 194);
+            this.upButton.Location = new System.Drawing.Point(276, 194);
             this.upButton.Name = "upButton";
             this.upButton.Size = new System.Drawing.Size(112, 40);
             this.upButton.TabIndex = 2;
             this.upButton.Text = "Up";
             this.upButton.UseVisualStyleBackColor = true;
+            this.upButton.Click += new System.EventHandler(this.upButton_Click);
             // 
             // downButton
             // 
             this.downButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.downButton.Location = new System.Drawing.Point(276, 194);
+            this.downButton.Location = new System.Drawing.Point(141, 194);
             this.downButton.Name = "downButton";
             this.downButton.Size = new System.Drawing.Size(112, 40);
             this.downButton.TabIndex = 3;
             this.downButton.Text = "Down";
             this.downButton.UseVisualStyleBackColor = true;
+            this.downButton.Click += new System.EventHandler(this.downButton_Click);
             // 
             // bottomOfListButton
             // 
@@ -107,6 +110,7 @@
             this.bottomOfListButton.TabIndex = 4;
             this.bottomOfListButton.Text = "Bottom of List";
             this.bottomOfListButton.UseVisualStyleBackColor = true;
+            this.bottomOfListButton.Click += new System.EventHandler(this.bottomOfListButton_Click);
             // 
             // customerNameTextBox
             // 
